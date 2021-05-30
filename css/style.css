@@ -1,0 +1,8 @@
+.grid-wraper {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-wraper__item {
+  margin: 0;
+}
