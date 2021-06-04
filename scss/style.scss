@@ -1,6 +1,147 @@
+body {
+    font-size: 18px;
+}
+
+p {
+    padding-left: 60px;
+    padding-right: 75px;
+}
+
+p.title {
+    padding-top: 60px;
+    font-size: 40px;
+}
+
+.button {
+    margin: 60px;
+    padding: 20px 30px;
+    color: #000;
+    text-decoration: none;
+    border: solid #000 1px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: .5s;
+}
+
+.button-white {
+    border: solid #fff 1px;
+}
+
+.button-white:hover {
+    color: #000;
+    background-color: #fff;
+    border: solid #000 1px;
+    transition: .5s;
+}
+
+.margin-bottom {
+    margin-bottom: 60px;
+}
+
+.white {
+    color: #fff;
+}
+
+form {
+    margin-left: 50px;
+}
+
+.input {
+    margin: 10px;
+    background-color: transparent;
+    border: solid #fff 1px;
+    border-radius: 10px;
+    padding: 20px 60px;
+    outline: none;
+    color: #fff;
+    &-big {
+        max-width: 580px;
+        width: 100%;
+        height: 160px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1178px) {
+    .input-big {
+        width: 220px;
+        margin-bottom: 0;
+    }
+}
+
+input[type="text"]::placeholder {
+    color: #fff;
+}
+
+.social-icon {
+    margin-left: 60px;
+}
+
 .grid-wraper {
     display: grid;
-    &__item {
-        margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min(715px) min(853px) min(715px);
+    max-width: 1374px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &__item:nth-child(1) {
+        background-image: url("../img/Rectangle1.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1 / span 2;
+    }
+    &__item:nth-child(2) {}
+    &__item:nth-child(3) {
+        grid-column: 1 / span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    &__item-1 {
+        background-image: url("../img/Rectangle4.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: 1 / 1 / span 2 / 2;
+    }
+    &__item-2 {
+        background-image: url("../img/Rectangle5.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+    &__item-3 {
+        background-image: url("../img/Rectangle6.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+    &__item:nth-child(4) {
+        background-image: url("../img/Rectangle2.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            margin-left: 60px;
+        }
+    }
+    &__item-margin {
+        margin-bottom: 20px;
+    }
+    &__item:nth-child(5) {
+        background-image: url("../img/Rectangle3.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 2 / 4;
     }
 }
